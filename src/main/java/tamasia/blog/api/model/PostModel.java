@@ -5,16 +5,16 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 @Entity
 @Table(name = "tb_post")
@@ -24,6 +24,7 @@ public class PostModel implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@JdbcTypeCode(SqlTypes.BINARY)
 	private UUID id;
 
 	@Column(nullable = false, length = 70)
@@ -35,7 +36,6 @@ public class PostModel implements Serializable {
 	@Column(nullable = false, length = 100)
 	private String titulo;
 
-	@Lob
 	@Column(columnDefinition = "TEXT", nullable = false)
 	private String texto;
 	
