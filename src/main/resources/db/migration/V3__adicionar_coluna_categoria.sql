@@ -1,0 +1,4 @@
+	
+	
+ALTER TABLE tb_post 
+ADD COLUMN categoria VARCHAR(100);

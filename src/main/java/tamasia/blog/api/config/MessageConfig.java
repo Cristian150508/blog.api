@@ -1,8 +1,8 @@
 package tamasia.blog.api.config;
+
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Locale;
-
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

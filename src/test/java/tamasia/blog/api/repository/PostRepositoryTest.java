@@ -43,7 +43,6 @@ public class PostRepositoryTest {
 		PostModel post6 = new PostModel("Fabio", "Animal domestico", "Pau mandado da Angeli");
 		PostModel post7 = new PostModel("Joao Pedro", "Rico de apartamento/café", "Pagando tudo pra Gracyane tá tentando");
 		
-		
 		repository.save(post1);
 		repository.save(post2);
 		repository.save(post3);
